@@ -1,6 +1,11 @@
 let inputElem = document.querySelector("input");
 let addToDoForm = document.querySelector(".add");
 let todoUlElem = document.querySelector(".todos");
+let modal = document.querySelector(".modal");
+let closeModal = document.getElementById("closeModal");
+let noBtn  =document.getElementById("noBtn");
+let yesBtn  =document.getElementById("yesBtn");
+
 
 function addNewTodo(newToDoValue) {
   let newTodoLi = document.createElement("li");
@@ -11,11 +16,32 @@ function addNewTodo(newToDoValue) {
   newTodoTitleSpan.innerHTML = newToDoValue;
 
   let newTodoTrash = document.createElement("i");
-  newTodoTrash.className = "fa fa-trash-o delete";
+  newTodoTrash.className = "delete";
+  newTodoTrash.innerHTML = "ClickForDelete"
+
+  closeModal.addEventListener("click",function(){
+    modal.style.display = "none"
+  });
 
   newTodoTrash.addEventListener("click", function (event) {
-    event.target.parentElement.remove();
+    if (modal.style.display = "none") {
+      modal.style.display = "block"
+    }
+    
+   
+
   });
+  
+  // yesBtn.addEventListener("click",function(event){
+  //   event.target.parentElement.remove();
+  // })
+  
+
+
+  noBtn.addEventListener("click",function(){
+    modal.style.display = "none"
+  })
+  // console.log(newTodoTrash);
 
   newTodoLi.append(newTodoTitleSpan, newTodoTrash);
 
