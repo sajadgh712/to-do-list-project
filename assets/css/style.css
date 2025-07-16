@@ -8,9 +8,10 @@ body {
   font-family: myFont;
 }
 
+
 .container {
-  max-width: 400px;
-  margin-top: 90px;
+  max-width: 400px; 
+  margin-top: 90px; 
 }
 
 .search i {
@@ -61,13 +62,6 @@ input[type="text"]:focus {
   100% {opacity: 100;}
 }
 
-/* @keyframes closeModal {
-  100% {opacity: 100;}
-  50%  {opacity: 50;}
-  25%  {opacity: 25;}
-  0%   {opacity:0;}
-
-} */
 
 
 .modal {
@@ -80,10 +74,7 @@ input[type="text"]:focus {
   background-color: rgba(95, 95, 95, 0.274);
   text-align: center;
   animation-name: openModal;
-  /* animation-name: closeModal; */
-  animation-duration: 5s;
-  
-  
+  animation-duration: 5s; 
 }
 
 .modal-div {
@@ -100,10 +91,7 @@ input[type="text"]:focus {
   animation-duration: 5s;
 }
 
-#closeModal {
-  font-size: 30px;
-  
-}
+
 
 #closeModal:hover{
   cursor: pointer;
